@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vanaspati Vikas</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.webp">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yMNpHcl0cmcg58zCT');
+        })();
+    </script>
+    <script>
+        function sendMail(e) {
+            e.preventDefault();
+            let fname = document.getElementById("fname").value;
+            let query = document.getElementById("query").value;
+            let mobile = document.getElementById("mobileName").value;
+            let email = document.getElementById("email").value;
+            var tempParams = {
+                from_name: fname,
+                email: email,
+                phone: mobile,
+                message: query
+            };
+            if (fname.length > 0 && query.length > 0 && mobile.length > 0 && email.length > 0) {
+                emailjs.send('service_ar3n2eq', 'template_822h99h', tempParams)
+                    .then(function (res) {
+                        console.log("Success", res.status);
+                    })
+                window.location.href = "#open-modal2";
+            }
+            else {
+                console.log("inputs not filled");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./hotelsPage/hotels.html">Search</a>
+                </li>
+                <li>
+                    <a href="./safari/safari.html">Virtual Garden</a>
+                </li>
+                <li>
+                    <a href="./tourPage/tour.html">Plant Identification</a>
+                </li>
+                <li>
+                    <a href="./explorePage/explore.html">Our-Work</a>
+                </li>
+                <li>
+                    <a href="./contactPage/contact.html">Contact-Us</a>
+                </li>
+            </ul>
+            <a href="./index.html">
+                <h1 class="logo">Vanaspati Vikas</h1>
+            </a>
+
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+
+        <div class="container showcase-container">
+            <h1 class="main-title">Explore, Learn, Grow: Nature's Pharmacy at Your Fingertips</h1>
+            <p class="medicinal">Medicinal plants are God's medicine.</p>
+            <a href="#intro" class="btn btn-primary">Explore</a>
+        </div>
+
+    </section>
+
+
+    <section class="intro" id="intro">
+        <div class="container intro-container">
+            <h1>Virtual Medicine Garden</h1>
+            <p class="vmg">Virtual Medicine Garden is a user-friendly website about medicinal plants. It's like an online garden
+                where you can:</p>
+            <ol>
+                <li>See 3D pictures of healing plants and look at them from all sides</li>
+                <li>Learn about each plant with easy-to-understand info and videos</li>
+                <li>Search for plants easily</li>
+                <li>Use your phone camera or upload a picture to identify plants</li>
+                <li>Get suggestions on which plants work well together</li>
+                <li>Chat with a smart helper that knows a lot about plants</li>
+                <li>Buy plants for personal use or for your business</li>
+            </ol>
+        </div>
+    </section>
+
+
+    <main class="featured">
+        <div class="container featured-container">
+            <h1>Featured specials</h1>
+            <p>Bordehi Wildlife Sanctuary is the sole Wildlife Sanctuary in India that offers night stay inside its
+                Jungle.
+            </p>
+        </div>
+
+
+        <section class="card-area">
+
+            <!-- Card -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--saf">
+                                    <img src="./imgs/growing-plant.webp" alt="jeep">
+
+                                    <h2 class="card-front__heading">
+                                        3D Model of Plants
+                                    </h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--ski">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <div class="bg1">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--ski">
+                                3D Model of Plants
+                            </h3>
+                            <p class="inside-page__text">
+                                You are able to view realistics models of your favourite plants.
+                            </p>
+                            <a href="./safari/safari.html" class="inside-page__btn inside-page__btn--ski">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Card -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--tour">
+                                    <img src="./imgs/greenhouse.webp" alt="Tour">
+
+
+                                    <h2 class="card-front__heading">
+                                        Cultivation Techniques
+                                    </h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--ski">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <div class="bg2">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--ski">
+                                Cultivation Techniques
+                            </h3>
+                            <p class="inside-page__text">
+                                Know more about how to grow your favourite plants.
+                            </p>
+                            <a href="./tourPage/tour.html" class="inside-page__btn inside-page__btn--ski">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- card -->
+            <section class="card-section">
+                <div class="card">
+                    <div class="flip-card">
+                        <div class="flip-card__container">
+                            <div class="card-front">
+                                <div class="card-front__tp card-front__tp--night">
+                                    <img src="./imgs/dandelion.webp" alt="night-Stay">
+
+
+                                    <h2 class="card-front__heading">
+                                        Informative
+                                    </h2>
+                                </div>
+
+                                <div class="card-front__bt">
+                                    <p class="card-front__text-view card-front__text-view--ski">
+                                        View me
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <div class="bg3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inside-page">
+                        <div class="inside-page__container">
+                            <h3 class="inside-page__heading inside-page__heading--ski">
+                                Advanced Information
+                            </h3>
+                            <p class="inside-page__text">
+                                This website will tell you advanced information about any plant.
+                            </p>
+                            <a href="./hotelsPage/hotels.html" class="inside-page__btn inside-page__btn--ski">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+    </main>
+
+    <section class="information">
+        <div class="information-container container">
+            <div class="information-content">
+                <p>
+                    <b>3D Plant Models<br></b>Immerse yourself in our collection of highly detailed 3D models of medicinal plants. These interactive models allow you to rotate, zoom, and explore each plant from every angle, providing an unparalleled view of their structure, leaves, flowers, and roots. By offering this visual depth, we enable users to study plant morphology in detail, enhancing their understanding and recognition skills. Whether you're a student, researcher, or enthusiast, these models offer a virtual hands-on experience that bridges the gap between textbook learning and real-world observation.
+                </p><br>
+                <p>
+                    <b>Extensive Plant Database<br></b>Access our comprehensive database containing a wealth of information on a wide variety of medicinal plants. Each plant entry includes scientific and common names, detailed descriptions of medicinal properties and uses, optimal growing conditions, cultivation tips, and historical and cultural significance. Our database is regularly updated with the latest research findings and traditional knowledge, ensuring you have access to accurate and current information. Users can easily navigate through categories, search for specific plants, or browse randomly to discover new herbal remedies and their applications in various medical traditions.
+                </p><br>
+                <p>
+                    <b>AI-Powered Plant Identification<br></b>Utilize cutting-edge artificial intelligence to identify medicinal plants instantly. Simply upload an image from your device or use your camera in real-time to capture a plant, and our AI will analyze it, providing you with the most likely species matches along with confidence levels. This feature is particularly useful for field work, helping researchers, students, and foragers to quickly and accurately identify plants they encounter. The AI model is continuously improved through machine learning, incorporating user feedback to enhance its accuracy over time.
+                </p><br>
+                <p>
+                    <b>Dietary Recommendations<br></b>Discover how to incorporate medicinal plants into your daily diet with our intelligent combination suggestions. Our system analyzes the nutritional and medicinal properties of plants, considering factors such as potential interactions, synergistic effects, and individual health profiles to provide personalized dietary recommendations. Users can input their health goals or concerns, and receive suggestions for herbal teas, supplements, or recipes that incorporate beneficial medicinal plants. This feature bridges the gap between traditional herbal wisdom and modern nutritional science, promoting holistic health and wellness.
+                </p>
+            </div>
+            <div class="enquiry">
+                <form action="">
+                    <h3>Enquiry</h3>
+
+                    <input type="text" id="fname" name="firstname" required placeholder="Name">
+
+                    <input type="number" min="0" id="mobileName" name="mobileName" required placeholder="Mobile No.">
+
+                    <input type="email" name="email" id="email" required placeholder="Email">
+
+                    <textarea name="query" id="query" placeholder="Post your query" rows="4" required></textarea>
+
+                    <button type="submit" class="btn" onclick="sendMail(event)">submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="information-container container" style="margin-top: 7rem;">
+            <div class="information-content img">
+                <br>
+                <p>
+                    <b>Expert Chatbot<br></b>Get personalized guidance and answers to your questions from our AI-powered chatbot, backed by an extensive knowledge base. This intelligent assistant is available 24/7 to provide information on plant identification, medicinal uses, potential side effects, and cultivation techniques. The chatbot can understand complex queries, offer step-by-step explanations, and even provide references to scientific studies or traditional texts. As you interact with the chatbot, it learns your interests and level of expertise, tailoring its responses to provide a more personalized and educational experience over time.
+                </p><br>
+                <p>
+                    <b>Multimedia Learning<br></b>Enhance your understanding of medicinal plants through our diverse multimedia resources. Watch high-quality videos demonstrating proper cultivation techniques, plant harvesting, and preparation of herbal remedies. Listen to audio clips featuring expert interviews and traditional stories about plant uses. Engage with interactive quizzes to test your knowledge and reinforce learning. Our multimedia content caters to different learning styles, making the educational experience more engaging and effective for users of all backgrounds.
+                </p><br>
+                <p>
+                    <b>Advanced Search Functionality<br></b>Easily find the information you need with our powerful and intuitive search tools. Our advanced search function allows users to filter plants by medicinal properties, growing conditions, geographic origin, or traditional use. You can also search by symptoms or health conditions to find relevant medicinal plants. The search engine understands synonyms and common misspellings, ensuring you find what you're looking for even if your query isn't perfect. Results can be sorted by relevance, popularity, or alphabetical order, and saved for future reference.
+                </p>
+            </div>
+            <div class="enquiry img">
+                <img src="./imgs/herbal.jpg" alt="jeep image">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- card tours -->
+
+    <section id="cardTour">
+
+        <div class="cardTour-container container">
+
+            <div class="cardsT">
+                <div class="cardT cardT--1">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category">AI-Powered Plant Identification</span>
+                        <h3 class="cardT__title">Upload images or use your device's camera to instantly identify medicinal plants in your environment.
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--2">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category">Dietary Recommendations</span>
+                        <h3 class="cardT__title">Discover how to incorporate medicinal plants into your diet with our intelligent combination suggestions.
+                        </h3>
+                    </div>
+                </div>
+
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--3">
+                    <div class="cardT__img"></div>
+                    <span href="#" class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category">Expert Chatbot</span>
+                        <h3 class="cardT__title">Get personalized guidance and answers to your questions from our AI-powered chatbot, backed by an extensive knowledge base.
+                        </h3>
+                    </div>
+                </div>
+
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--4">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category">Commercial Use</span>
+                        <h3 class="cardT__title">Upgrade to a commercial account for additional tools and resources tailored to farmers, herbalists, and businesses in the medicinal plant industry.
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+
+
+
+    <!-- how to reach -->
+
+    <!-- <footer id="footer">
+        <div class="container">
+            <h2>Bordehi Wildlife Sanctuary &copy; 2022, all rights reserved. <br>Made with &hearts; by Abhishek & Aditya
+            </h2>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
+    </footer> -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="fbox-container container">
+
+
+            <div class="fbox">
+                <h3>Virtual Medicinal Garden &#127808;</h3>
+                <p>Virtual Medicine Garden: An immersive online platform for medicinal plant education. Featuring 3D models, detailed information, and AI-powered tools. Empowering students, farmers, and enthusiasts with comprehensive herbal knowledge. Explore, learn, and discover the world of medicinal plants through cutting-edge technology.
+
+                    But our work is far from done!</p>
+                <div class="share">
+                    <a href="https://github.com/mr-tweaker" class="fab fa-github"></a>
+                    <a href="https://www.linkedin.com/in/aditya-ramesh-fed/" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="fbox">
+                <h3>Contact Info</h3>
+                <a class="links link"> <i class="fas fa-phone"></i>+919582015192</a>
+                <a class="links link"> <i class="fas fa-phone"></i>+917834820844</a>
+                <a class="links link"> <i class="fas fa-envelope"></i>aniket.lamba@gmail.com</a>
+                <a class="links link"> <i class="fas fa-map-marker-alt"></i>India - Delhi</a>
+            </div>
+
+            <!-- <div class="fbox">
+                <h3>At a Glance</h3>
+                <a href="./index.html" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="./aboutPage/about.html" class="links"> <i class="fas fa-arrow-right"></i>About Us</a>
+                <a href="./hotelsPage/hotels.html" class="links"> <i class="fas fa-arrow-right"></i>Hotels</a>
+                <a href="./safari/safari.html" class="links"> <i class="fas fa-arrow-right"></i>Safari Booking</a>
+                <a href="./tourPage/tour.html" class="links"> <i class="fas fa-arrow-right"></i>Tour packages</a>
+                <a href="./explorePage/explore.html" class="links"> <i class="fas fa-arrow-right"></i>Our Work</a>
+                <a href="./galleryPage/gallery.html" class="links"> <i class="fas fa-arrow-right"></i>Gallery</a>
+            </div> -->
+
+        </div>
+
+        <div class="credit"> Made with &hearts; by <span> Aniket and Aditya </span> |<br> Virtual Medicine Garden
+            &copy; 2024, all rights reserved. </div>
+
+    </section>
+
+    <div id="open-modal2" class="modal-window window2">
+        <div>
+            <a href="#" title="Close" onclick="home()" class="modal-close">&#10060;</a>
+            <div>
+                <img src="./imgs/emailDone.png" alt="mail">
+                <h2>Email Acknowledgement</h2>
+                <h5>We have received your Email and We'll try Our best to revert back as soon as possible</h5>
+                <a href="#" title="Close" onclick="home()" class="btn closebtn">Close</a>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
+    <!-- footer section ends -->
+    <script src="./functionality.js"></script>
+    <script>
+        function home() {
+            console.log("hello");
+            window.location.replace("/WebTech-project/index.html");
+        }
+    </script>
+
+</body>
+
+</html>
