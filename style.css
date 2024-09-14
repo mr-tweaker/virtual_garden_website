@@ -126,7 +126,7 @@ input::-webkit-inner-spin-button {
 
 .showcase-area {
   height: 100vh;
-  background: url(/imgs/aloe-vera.jpg);
+  background: url(./imgs/aloe-vera.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
