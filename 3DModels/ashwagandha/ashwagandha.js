@@ -61,7 +61,7 @@ function fitCameraToObject(camera, object, offset, controls) {
 }
 
 const loader = new GLTFLoader();
-loader.load('/3DModels/ashwagandha/ashwagandha.glb', (gltf) => {
+loader.load('https://mr-tweaker.github.io/virtual_garden_website/3DModels/ashwagandha/ashwagandha.glb', (gltf) => {
   console.log('Model loaded successfully');
   const model = gltf.scene;
   scene.add(model);

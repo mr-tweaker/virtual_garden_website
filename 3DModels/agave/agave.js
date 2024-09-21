@@ -69,7 +69,7 @@ dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5
 const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader);
 
-loader.load('/3DModels/agave/agave.glb', (gltf) => {
+loader.load('https://mr-tweaker.github.io/virtual_garden_website/3DModels/agave/agave.glb', (gltf) => {
   console.log('Model loaded successfully');
   const model = gltf.scene;
   scene.add(model);
