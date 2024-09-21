@@ -1,0 +1,124 @@
+:root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --primary: #1a1a1a;
+    --primary-foreground: #fafafa;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #1a1a1a;
+    --muted: #f4f4f5;
+    --muted-foreground: #737373;
+    --accent: #f4f4f5;
+    --accent-foreground: #1a1a1a;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #1a1a1a;
+    --radius: 0.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}
+
+.image-container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .image-container {
+        width: 33.333%;
+    }
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.thumbnail {
+    width: 33.333%;
+    border-radius: var(--radius);
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 66.667%;
+        padding-left: 1rem;
+        margin-top: 0;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--muted-foreground);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.description {
+    color: var(--muted-foreground);
+}
+
+.medicinal-uses {
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    color: var(--muted-foreground);
+}
+
+.button-container {
+    margin-top: 1rem;
+}
+
+.comment-button {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-button:hover {
+    background-color: #e4e4e7;
+}
