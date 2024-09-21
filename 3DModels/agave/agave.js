@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -60,7 +61,14 @@ function fitCameraToObject(camera, object, offset, controls) {
   }
 }
 
+// Create a DRACOLoader instance
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+
+// Create a GLTFLoader instance and set the Draco loader
 const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader);
+
 loader.load('/3DModels/agave/agave.glb', (gltf) => {
   console.log('Model loaded successfully');
   const model = gltf.scene;
